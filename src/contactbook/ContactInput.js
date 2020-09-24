@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import ContactList from './ContactList'
 
 function ContactInput(props) {
@@ -42,11 +42,9 @@ function ContactInput(props) {
             })
     }    
 
-    if(!props.isLoad){
+    useEffect(()=>{
         downloadData()
-        console.log("APP LOAD");
-        props.setLoad(true)
-    }
+    },[])
 
     return (
         <div className="contact__input">

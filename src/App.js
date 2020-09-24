@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <header><div>Contact<span>Book</span></div></header>
-      <ContactInput isLoad={isLoad} setLoad={setLoad}/>
+      <ContactInput/>
     </div>
   );
 }
